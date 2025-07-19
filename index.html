@@ -1,0 +1,1903 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GraphiCom - Your Partner in Digital Solutions & Creative Services</title>
+    <meta name="description" content="GraphiCom offers comprehensive government services, printing, documentation, graphic design, web development, banking services, and more. Your one-stop solution for all digital and administrative needs.">
+    <meta name="keywords" content="KRA services, NTSA services, passport photos, printing, graphic design, web development, M-PESA services, government forms, digital marketing, office supplies, Nairobi, Kenya">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="GraphiCom - Your Partner in Digital Solutions & Creative Services">
+    <meta property="og:description" content="GraphiCom offers comprehensive government services, printing, documentation, graphic design, web development, and more.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://placehold.co/1200x630/007bff/ffffff?text=GraphiCom+Website+Preview">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* CSS Variables */
+        :root {
+            --color-primary: #007bff;
+            --color-primary-dark: #0056b3;
+            --color-text: #333;
+            --color-heading: #1a1a1a;
+            --color-background: #f8f9fa;
+            --color-card-background: #ffffff;
+            --color-border: #e0e0e0;
+            --color-shadow: rgba(0, 0, 0, 0.1);
+            --color-gradient-start: #2a60ff;
+            --color-gradient-end: #00e0ff;
+            --color-header-bg: rgba(255, 255, 255, 0.7);
+            --color-header-border: rgba(0, 0, 0, 0.05);
+            --color-popular: #28a745;
+            --color-fast: #ffc107;
+            --color-specialty: #17a2b8;
+            --color-new: #fd7e14;
+            --font-primary: 'Inter', sans-serif;
+            --spacing-xs: 0.25rem;
+            --spacing-sm: 0.5rem;
+            --spacing-md: 1rem;
+            --spacing-lg: 1.5rem;
+            --spacing-xl: 2rem;
+            --spacing-2xl: 3rem;
+            --spacing-3xl: 4rem;
+            --border-radius-sm: 0.25rem;
+            --border-radius-md: 0.5rem;
+            --border-radius-lg: 0.75rem;
+            --shadow-sm: 0 1px 3px var(--color-shadow);
+            --shadow-md: 0 4px 6px var(--color-shadow);
+            --shadow-lg: 0 10px 15px -3px var(--color-shadow), 0 4px 6px -2px var(--color-shadow);
+        }
+
+        /* Dark Mode */
+        [data-theme='dark'] {
+            --color-primary: #66b3ff;
+            --color-primary-dark: #3385ff;
+            --color-text: #e0e0e0;
+            --color-heading: #f8f9fa;
+            --color-background: #1a1a1a;
+            --color-card-background: #2b2b2b;
+            --color-border: #444444;
+            --color-shadow: rgba(255, 255, 255, 0.05);
+            --color-header-bg: rgba(43, 43, 43, 0.7);
+            --color-header-border: rgba(255, 255, 255, 0.05);
+            --color-popular: #78e08f;
+            --color-fast: #ffe480;
+            --color-specialty: #7ed6df;
+            --color-new: #ff9f40;
+        }
+
+        /* Base Styles */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scrollbar-color: var(--color-primary) var(--color-background);
+            scrollbar-width: thin;
+        }
+
+        body {
+            font-family: var(--font-primary);
+            line-height: 1.6;
+            color: var(--color-text);
+            background-color: var(--color-background);
+            transition: background-color 0.3s ease, color 0.3s ease;
+            overflow-x: hidden;
+        }
+
+        a {
+            color: var(--color-primary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--color-primary-dark);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            color: var(--color-heading);
+            margin-bottom: var(--spacing-md);
+            line-height: 1.2;
+        }
+
+        p {
+            margin-bottom: var(--spacing-md);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Accessibility */
+        .skip-link {
+            position: absolute;
+            top: -9999px;
+            left: 0;
+            z-index: 1000;
+            background-color: var(--color-primary);
+            color: white;
+            padding: var(--spacing-sm);
+            border-radius: var(--border-radius-sm);
+        }
+
+        .skip-link:focus {
+            top: 0;
+            left: 0;
+        }
+
+        :focus-visible {
+            outline: 2px solid var(--color-primary);
+            outline-offset: 3px;
+            border-radius: var(--border-radius-sm);
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+
+        /* Utility Classes */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-lg);
+        }
+
+        .grid {
+            display: grid;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .justify-center {
+            justify-content: center;
+        }
+
+        .items-center {
+            align-items: center;
+        }
+
+        .gap-8 {
+            gap: var(--spacing-xl);
+        }
+
+        .text-gradient {
+            background: linear-gradient(45deg, var(--color-gradient-start), var(--color-gradient-end));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .btn {
+            padding: var(--spacing-sm) var(--spacing-lg);
+            border: none;
+            border-radius: var(--border-radius-md);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--spacing-xs);
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background-color: var(--color-primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--color-primary-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--color-primary);
+            border: 2px solid var(--color-primary);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--color-primary);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+            padding: var(--spacing-md) 0;
+            background-color: var(--color-header-bg);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid var(--color-header-border);
+            transition: all 0.3s ease;
+        }
+
+        .header.sticky {
+            padding: var(--spacing-sm) 0;
+            box-shadow: var(--shadow-md);
+        }
+
+        .header .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo a {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--color-heading);
+            letter-spacing: 2px;
+            background: linear-gradient(45deg, #8A2BE2, #FFD700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            transition: all 0.3s ease;
+        }
+
+        .logo a:hover {
+            filter: brightness(1.2);
+            transform: scale(1.02);
+        }
+
+        .nav-list {
+            display: flex;
+            gap: var(--spacing-xl);
+        }
+
+        .nav-link {
+            font-weight: 500;
+            color: var(--color-heading);
+            position: relative;
+            padding: var(--spacing-xs) 0;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--color-primary);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after,
+        .nav-link.current::after {
+            width: 100%;
+        }
+
+        .nav-link.current {
+            color: var(--color-primary);
+        }
+
+        /* Mobile Menu */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: var(--spacing-sm);
+            z-index: 110;
+        }
+
+        .icon-bar {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: var(--color-heading);
+            margin: 5px 0;
+            transition: all 0.3s ease-in-out;
+            border-radius: 2px;
+        }
+
+        .menu-toggle.active .icon-bar:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+        }
+
+        .menu-toggle.active .icon-bar:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle.active .icon-bar:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
+        }
+
+        /* Theme Switch */
+        .theme-switch-wrapper {
+            display: flex;
+            align-items: center;
+            margin-left: var(--spacing-xl);
+        }
+
+        .theme-switch {
+            position: relative;
+            display: inline-block;
+            width: 70px;
+            height: 40px;
+        }
+
+        .theme-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 34px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 8px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 32px;
+            width: 32px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .slider .sun-icon {
+            color: #f39c12;
+            font-size: 1.2rem;
+            position: absolute;
+            left: 8px;
+            z-index: 1;
+            opacity: 1;
+            transition: opacity 0.4s ease-in-out;
+        }
+
+        .slider .moon-icon {
+            color: #f1c40f;
+            font-size: 1.2rem;
+            position: absolute;
+            right: 8px;
+            z-index: 1;
+            opacity: 0;
+            transition: opacity 0.4s ease-in-out;
+        }
+
+        input:checked + .slider {
+            background-color: var(--color-primary);
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(30px);
+        }
+
+        input:checked + .slider .sun-icon {
+            opacity: 0;
+        }
+
+        input:checked + .slider .moon-icon {
+            opacity: 1;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+            background-image: url('https://th.bing.com/th/id/OIP.RW_9fj_eehgD69MJbn4AKgHaEK?rs=1&pid=ImgDetMain&cb=idpwebp2&o=7&rm=3');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding-top: 100px;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(42, 96, 255, 0.4) 0%, rgba(0, 224, 255, 0.4) 100%);
+            animation: gradientShift 10s ease infinite alternate;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            max-width: 800px;
+        }
+
+        .hero-title {
+            font-size: 2.25rem;
+            font-weight: 800;
+            margin-bottom: var(--spacing-lg);
+            color: white;
+        }
+
+        .typing-text {
+            color: white;
+        }
+
+        .blinking-cursor {
+            font-weight: 300;
+            animation: blinkCursor 0.75s infinite;
+            color: white;
+        }
+
+        .hero-description {
+            font-size: 1.25rem;
+            margin-bottom: var(--spacing-xl);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        /* Products & Services Section */
+        .products-services-section {
+            padding: var(--spacing-3xl) 0;
+        }
+
+        .section-title {
+            font-size: 1.875rem;
+            text-align: center;
+            margin-bottom: var(--spacing-3xl);
+        }
+
+        .category-title {
+            font-size: 1.5rem;
+            margin-top: var(--spacing-2xl);
+            margin-bottom: var(--spacing-xl);
+            color: var(--color-heading);
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+        }
+
+        .category-title svg {
+            color: var(--color-primary);
+            width: 28px;
+            height: 28px;
+        }
+
+        .products-services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-xl);
+            margin-bottom: var(--spacing-3xl);
+        }
+
+        .service-card {
+            background-color: var(--color-card-background);
+            border: 1px solid var(--color-border);
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-sm);
+            padding: var(--spacing-lg);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .service-card .card-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: var(--border-radius-md);
+            margin-bottom: var(--spacing-md);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card.image-hover:hover .card-image {
+            transform: scale(1.05);
+        }
+
+        .badge {
+            position: absolute;
+            top: var(--spacing-md);
+            right: var(--spacing-md);
+            padding: var(--spacing-xs) var(--spacing-sm);
+            border-radius: var(--border-radius-sm);
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: white;
+            text-transform: uppercase;
+        }
+
+        .badge-popular { background-color: var(--color-popular); }
+        .badge-fast { background-color: var(--color-fast); }
+        .badge-specialty { background-color: var(--color-specialty); }
+        .badge-new { background-color: var(--color-new); }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--color-heading);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .card-description {
+            font-size: 1rem;
+            color: var(--color-text);
+            flex-grow: 1;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .star-rating {
+            color: gold;
+            font-size: 1.125rem;
+            margin-bottom: var(--spacing-sm);
+            display: flex;
+            align-items: center;
+            gap: 2px;
+        }
+
+        .request-service-btn {
+            margin-top: var(--spacing-md);
+            width: 100%;
+            font-size: 1.125rem;
+        }
+
+        /* About Section */
+        .about-section {
+            padding: var(--spacing-3xl) 0;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--spacing-xl);
+            align-items: center;
+        }
+
+        .about-text {
+            font-size: 1.125rem;
+            line-height: 1.8;
+        }
+
+        .about-text ul {
+            margin-top: var(--spacing-md);
+            margin-bottom: var(--spacing-xl);
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-sm);
+        }
+
+        .about-text ul li {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            color: var(--color-text);
+        }
+
+        .about-text .icon-check-circle {
+            color: #28a745;
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+        }
+
+        .about-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .about-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* CEO Section */
+        .ceo-section {
+            padding: var(--spacing-3xl) 0;
+            background-color: var(--color-card-background);
+            border-top: 1px solid var(--color-border);
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .ceo-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--spacing-xl);
+            align-items: center;
+        }
+
+        .ceo-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .ceo-image img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid var(--color-primary);
+            box-shadow: var(--shadow-md);
+        }
+
+        .ceo-text {
+            text-align: center;
+            font-size: 1.125rem;
+            line-height: 1.8;
+        }
+
+        .ceo-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--color-heading);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .ceo-title {
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: var(--color-primary);
+            margin-bottom: var(--spacing-md);
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: var(--spacing-3xl) 0;
+        }
+
+        .contact-grid {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-info {
+            font-size: 1.125rem;
+            line-height: 1.8;
+        }
+
+        .contact-info p {
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .contact-list {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-xl);
+            align-items: center;
+        }
+
+        .contact-list li {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            color: var(--color-text);
+        }
+
+        .contact-list li strong {
+            color: var(--color-heading);
+        }
+
+        .contact-list li svg {
+            color: var(--color-primary);
+            width: 24px;
+            height: 24px;
+            flex-shrink: 0;
+        }
+
+        .social-contact-icons {
+            display: flex;
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-xl);
+            justify-content: center;
+        }
+
+        .social-contact-icons a {
+            color: var(--color-primary);
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .social-contact-icons a:hover {
+            color: var(--color-primary-dark);
+            transform: translateY(-3px);
+        }
+
+        .social-contact-icons svg {
+            width: 32px;
+            height: 32px;
+            stroke-width: 1.5;
+        }
+
+        /* Fixed Buttons */
+        .whatsapp-fab {
+            position: fixed;
+            bottom: var(--spacing-xl);
+            right: var(--spacing-xl);
+            background-color: #25d366;
+            color: white;
+            width: auto;
+            height: 60px;
+            padding: 0 25px;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            font-weight: 600;
+            box-shadow: var(--shadow-lg);
+            z-index: 90;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-fab:hover {
+            background-color: #128c7e;
+            transform: scale(1.05) translateY(-3px);
+        }
+
+        .whatsapp-fab svg {
+            width: 32px;
+            height: 32px;
+            stroke: white;
+            stroke-width: 2.5;
+            margin-right: 8px;
+        }
+
+        .scroll-to-top {
+            position: fixed;
+            bottom: var(--spacing-xl);
+            left: var(--spacing-xl);
+            background-color: var(--color-primary);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            box-shadow: var(--shadow-md);
+            border: none;
+            cursor: pointer;
+            z-index: 90;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .scroll-to-top.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(-5px);
+        }
+
+        .scroll-to-top:hover {
+            background-color: var(--color-primary-dark);
+            transform: scale(1.05) translateY(-8px);
+        }
+
+        .scroll-to-top svg {
+            width: 24px;
+            height: 24px;
+            stroke: white;
+            stroke-width: 2.5;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--color-header-bg);
+            backdrop-filter: blur(8px);
+            border-top: 1px solid var(--color-header-border);
+            padding: var(--spacing-xl) 0;
+            color: var(--color-text);
+            font-size: 0.875rem;
+        }
+
+        .footer .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+
+        .footer p {
+            margin: 0;
+        }
+
+        .footer .social-icons {
+            display: flex;
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-md);
+        }
+
+        .footer .social-icons a {
+            color: var(--color-primary);
+            transition: color 0.3s ease;
+        }
+
+        .footer .social-icons a:hover {
+            color: var(--color-primary-dark);
+            transform: translateY(-3px);
+        }
+
+        .footer .social-icons svg {
+            width: 24px;
+            height: 24px;
+            stroke-width: 1.5;
+        }
+
+        /* Animations */
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes blinkCursor {
+            0%, 75% { opacity: 1; }
+            76%, 100% { opacity: 0; }
+        }
+
+        /* Fade-in Animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-in.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive Design */
+        @media (min-width: 768px) {
+            .about-content {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .ceo-content {
+                grid-template-columns: auto 1fr;
+                text-align: left;
+            }
+            
+            .ceo-image {
+                margin-bottom: 0;
+            }
+        }
+
+        @media (max-width: 1023px) {
+            .hero-title {
+                font-size: 1.875rem;
+            }
+
+            .hero-description {
+                font-size: 1.125rem;
+            }
+
+            .nav-list {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: var(--color-header-bg);
+                border-top: 1px solid var(--color-header-border);
+                box-shadow: var(--shadow-md);
+                padding: var(--spacing-lg);
+                gap: var(--spacing-lg);
+                align-items: center;
+                opacity: 0;
+                visibility: hidden;
+                transform: translateY(-10px);
+                transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+            }
+
+            .nav-list.active {
+                display: flex;
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .theme-switch-wrapper {
+                margin-left: var(--spacing-md);
+            }
+
+            .products-services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer .container {
+                flex-direction: column;
+                gap: var(--spacing-md);
+            }
+        }
+
+        @media (max-width: 767px) {
+            .container {
+                padding: 0 var(--spacing-md);
+            }
+
+            .hero-title {
+                font-size: 1.5rem;
+            }
+
+            .hero-description {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+                margin-bottom: var(--spacing-xl);
+            }
+
+            .category-title {
+                font-size: 1.25rem;
+            }
+
+            .products-services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .service-card {
+                padding: var(--spacing-md);
+            }
+
+            .whatsapp-fab {
+                width: 60px;
+                padding: 0;
+                border-radius: 50%;
+            }
+
+            .whatsapp-fab span:not([data-lucide]) {
+                display: none;
+            }
+
+            .whatsapp-fab svg {
+                margin-right: 0;
+            }
+
+            .scroll-to-top {
+                bottom: var(--spacing-md);
+                left: var(--spacing-md);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .whatsapp-fab {
+                width: 60px;
+                padding: 0;
+                border-radius: 50%;
+            }
+            
+            .whatsapp-fab span:not([data-lucide]) {
+                display: none;
+            }
+            
+            .whatsapp-fab svg {
+                margin-right: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip Links -->
+    <a href="#main-content" class="sr-only skip-link">Skip to main content</a>
+    <a href="#products-services" class="sr-only skip-link">Skip to products and services</a>
+    <a href="#about" class="sr-only skip-link">Skip to about</a>
+    <a href="#ceo-founder" class="sr-only skip-link">Skip to leadership</a>
+    <a href="#contact" class="sr-only skip-link">Skip to contact</a>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="#" aria-label="GraphiCom Home">GraphiCom</a>
+            </div>
+            <nav class="navigation-menu" aria-label="Main Navigation">
+                <button class="menu-toggle" aria-controls="main-nav-list" aria-expanded="false" aria-label="Open navigation menu">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <ul id="main-nav-list" class="nav-list">
+                    <li><a href="#home" class="nav-link current">Home</a></li>
+                    <li><a href="#products-services" class="nav-link">Services</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#ceo-founder" class="nav-link">Leadership</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="checkbox" aria-label="Toggle light and dark mode">
+                    <input type="checkbox" id="checkbox" />
+                    <div class="slider round">
+                        <span class="sun-icon">☀️</span>
+                        <span class="moon-icon">🌙</span>
+                    </div>
+                </label>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <h1 class="hero-title">
+                    <span class="typing-text" data-words='["Government Services.", "Digital Solutions.", "Creative Design.", "Professional Printing."]'></span>
+                    <span class="blinking-cursor">|</span>
+                </h1>
+                <p class="hero-description">GraphiCom is your comprehensive solution for government services, digital solutions, creative design, professional printing, and administrative support. From KRA services to web development, we've got you covered.</p>
+            </div>
+        </section>
+
+        <!-- Products and Services Section -->
+        <section id="products-services" class="products-services-section container">
+            <h2 class="section-title text-gradient fade-in">Our Products & Services</h2>
+
+            <!-- 1. Government Services -->
+            <h3 class="category-title fade-in"><span data-lucide="building-2"></span> 💼 GOVERNMENTAL SERVICES...</h3>
+            <div class="products-services-grid">
+                <!-- KRA Services -->
+                <div class="service-card image-hover fade-in" data-service-name="KRA Services">
+                    <img src="https://th.bing.com/th/id/OIP.SXtXeyTbRc56JRXVLprsfAHaEK?w=1200&h=675&rs=1&pid=ImgDetMain" alt="KRA Services" class="card-image">
+                    <span class="badge badge-popular">Popular</span>
+                    <h4 class="card-title">KRA Services</h4>
+                    <p class="card-description">KRA PIN application & retrieval, Filing tax returns, and all KRA-related services.</p>
+                    <div class="star-rating" aria-label="4.9 out of 5 stars">
+                        <span>★★★★★</span> <span class="sr-only">4.9 stars</span> (150 reviews)
+                    </div>
+                    <button class="btn btn-outline request-service-btn" data-service="KRA Services">Request Service</button>
+                </div>
+
+                <!-- NTSA Services -->
+                <div class="service-card image-hover fade-in" data-service-name="NTSA Services">
+                    <img src="https://th.bing.com/th/id/OIP.A4FKpb6w_hGTcpOp1nZD3gHaDj?rs=1&pid=ImgDetMain" alt="NTSA Services" class="card-image">
+                    <span class="badge badge-fast">Fast</span>
+                    <h4 class="card-title">NTSA Services</h4>
+                    <p class="card-description">TIMS account creation, Vehicle transfer & search, Smart DL booking, Driver's License Renewal.</p>
+                    <div class="star-rating" aria-label="4.8 out of 5 stars">
+                        <span>★★★★★</span> <span class="sr-only">4.8 stars</span> (120 reviews)
+                    </div>
+                    <button class="btn btn-outline request-service-btn" data-service="NTSA Services">Request Service</button>
+                </div>
+
+                <!-- eCitizen Services -->
+                <div class="service-card image-hover fade-in" data-service-name="eCitizen Services">
+                    <img src="https://th.bing.com/th/id/OIP.NNxz-VSFasexEsg7sQR7bgHaHa?rs=1&pid=ImgDetMain" alt="eCitizen Services" class="card-image">
+                    <span class="badge badge-specialty">Specialty</span>
+                    <h4 class="card-title">eCitizen Services</h4>
+                    <p class="card-description">Good conduct certificates, Birth/death certificates, Business name search, Marriage certificates.</p>
+                    <div class="star-rating" aria-label="4.7 out of 5 stars">
+                        <span>★★★★★</span> <span class="sr-only">4.7 stars</span> (95 reviews)
+                    </div>
+                    <button class="btn btn-outline request-service-btn" data-service="eCitizen Services">Request Service</button>
+                </div>
+
+                <!-- Medical Services -->
+                <div class="service-card image-hover fade-in" data-service-name="Medical Services">
+                    <img src="https://th.bing.com/th/id/OIP.Mp5_GkhRUvYFfBO_Odln1gHaFQ?rs=1&pid=ImgDetMain" alt="Medical Services" class="card-image">
+                    <span class="badge badge-new">New</span>
+                    <h4 class="card-title">Medical Services</h4>
+                    <p class="card-description">Member registration, Status check & card updates for medical services.</p>
+                    <div class="star-rating" aria-label="4.6 out of 5 stars">
+                        <span>★★★★★</span> <span class="sr-only">4.6 stars</span> (80 reviews)
+                    </div>
+                    <button class="btn btn-outline request-service-btn" data-service="Medical Services">Request Service</button>
+                </div>
+
+                <!-- NSSF Services -->
+                <div class="service-card image-hover fade-in" data-service-name="NSSF Services">
+                    <img src="https://th.bing.com/th/id/R.5d2ce835b52458d8e9f5932e7147b56c?rik=h0FHpibFQR4K%2bg&pid=ImgRaw&r=0" alt="NSSF Services" class="card-image">
+                    <span class="badge badge-fast">Fast</span>
+                    <h4 class="card-title">NSSF Services</h4>
+                    <p class="card-description">Member registration and Statement download services.</p>
+                    <div class="star-rating" aria-label="4.8 out of 5 stars">
+                        <span>★★★★★</span> <span class="sr-only">4.8 stars</span> (70 reviews)
+                    </div>
+                    <button class="btn btn-outline request-service-btn" data-service="NSSF Services">Request Service</button>
+                </div>
+
+                <!-- EPRA Services -->
+                <div class="service-card image-hover fade-in" data-service-name="EPRA Services">
+                    <img src="https://th.bing.com/th/id/OIP.inLONK5pHnV5fEH7Z23RVQHaHa?rs=1&pid=ImgDetMain" alt="EPRA Services" class="card-image">
+                    <span class="badge badge-specialty">Specialty</span>
+                    <h4 class="card-title">EPRA Services</h4>
+                    <p class="card-description">License application & renewal for energy-related permits.</p>
+                    <div class="star-rating" aria-label="4.7 out of 5 stars">
+                        <span>★★★★★</span> <span class="sr-only">4.7 stars</span> (45 reviews)
+                    </div>
+                    <button class="btn btn-outline request-service-btn" data-service="EPRA Services">Request Service</button>
+                </div>
+
+                <!-- KUCCPS Services -->
+                <div class="service-card image-hover fade-in" data-service-name="KUCCPS Services">
+                    <img src="https://th.bing.com/th/id/OIP.UeIr1fyHsEYUnZ5yD_thUwHaE8?rs=1&pid=ImgDetMain" alt="KUCCPS Services" class="card-image">
+                    <span class="badge badge-new">New</span>
+                    <h4 class="card-title">KUCCPS Services</h4>
+                    <p class="card-description">KUCCPS portal help, Course application & revision assistance.</p>
+                    <div class="star-rating" aria-label="4.9 out of 5 stars">
+                        <span>★★★★★</span> <span class="sr-only">4.9 stars</span> (60 reviews)
+                    </div>
+                    <button class="btn btn-outline request-service-btn" data-service="KUCCPS Services">Request Service</button>
+                </div>
+
+                <!-- HELB Services -->
+                <div class="service-card image-hover fade-in" data-service-name="HELB Services">
+                    <img src="https://th.bing.com/th/id/OIP.9AtYwap7v7dligcoIQo51QHaE8?rs=1&pid=ImgDetMain" alt="HELB Services" class="card-image">
+                    <span class="badge badge-popular">Popular</span>
+                    <h4 class="card-title">HELB Services</h4>
+                    <p class="card-description">HELB portal help, Loan application, Compliance certificate, Loan status checks.</p>
+                    <div class="star-rating" aria-label="4.8 out of 5 stars">
+                        <span>★★★★★</span> <span class="sr-only">4.8 stars</span> (85 reviews)
+                    </div>
+                    <button class="btn btn-outline request-service-btn" data-service="HELB Services">Request Service</button>
+                </div>
+
+                <!-- Passport Application -->
+                <div class="service-card image-hover fade-in" data-service-name="Passport Application">
+                    <img src="https://static.vecteezy.com/system/resources/previews/011/427/390/original/company-employee-id-photo-driver-licence-social-media-avatar-passport-design-element-male-character-icon-young-man-with-beard-portrait-flat-modern-illustration-vector.jpg" alt="Passport Application" class="card-image">
+                    <span class="badge badge-specialty">Specialty</span>
+                    <h4 class="card-title">Passport Application</h4>
+                    <p class="card-description">Filling online forms and Booking appointments for passport applications.</p>
+                    <div class="star-rating" aria-label="4.9 out of 5 stars">
+                        <span>★★★★★</span> <span class="sr-only">4.9 stars</span> (100 reviews)
+                    </div>
+                    <button class="btn btn-outline request-service-btn" data-service="Passport Application">Request Service</button>
+                </div>
+
+                <!-- Company Registration -->
+                <div class="service-card image-hover fade-in" data-service-name="Company Registration">
+                    <img src="https://th.bing.com/th/id/OIP.kmSpmx399T2pXk7-bZq9ZwHaDO?rs=1&pid=ImgDetMain" alt="Company Registration" class="card-image">
+                    <span class="badge badge-new">New</span>
+                    <h4 class="card-title">Company Registration</h4>
+                    <p class="card-description">Business name registration and Certificate download services.</p>
+                    <div class="star-rating" aria-label="5.0 out of 5 stars">
+                        <span>★★★★★</span> <span class="sr-only">5.0 stars</span> (40 reviews)
+                    </div>
+                    <button class="btn btn-outline request-service-btn" data-service="Company Registration">Request Service</button>
+                </div>
+
+                <!-- CRB Services -->
+                <div class="service-card image-hover fade-in" data-service-name="CRB Services">
+                    <img src="https://th.bing.com/th/id/OIP.5XGpu53Un5p-ZQhPdv2gEAHaD4?w=1200&h=630&rs=1&pid=ImgDetMain" alt="CRB Services" class="card-image">
+                    <span class="badge badge-fast">Fast</span>
+                    <h4 class="card-title">CRB Services</h4>
+                    <p class="card-description">Clearance certificate and Listing status check services.</p>
+                    <div class="star-rating" aria-label="4.7 out of 5 stars">
+                        <span>★★★★★</span> <span class="sr-only">4.7 stars</span> (55 reviews)
+                    </div>
+                    <button class="btn btn-outline request-service-btn" data-service="CRB Services">Request Service</button>
+                </div>
+
+                <!-- Eulogies -->
+                <div class="service-card image-hover fade-in" data-service-name="Eulogies">
+                    <img src="https://cdn.wallpapersafari.com/65/25/mfyQzr.jpg" alt="Eulogies" class="card-image">
+                    <span class="badge badge-specialty">Specialty</span>
+                    <h4 class="card-title">Eulogies</h4>
+                    <p class="card-description">Professional eulogy formatting, design, and printing services.</p>
+                    <div class="star-rating" aria-label="5.0 out of 5 stars">
+                        <span>★★★★★</span> <span class="sr-only">5.0 stars</span> (30 reviews)
+                    </div>
+                    <button class="btn btn-outline request-service-btn" data-service="Eulogies">Request Service</button>
+                </div>
+            </div>
+
+            <!-- 2. Banking & Financial Services -->
+            <h3 class="category-title fade-in"><span data-lucide="credit-card"></span> 💳 BANKING & FINANCIAL SERVICES...</h3>
+            <div class="products-services-grid">
+                <div class="service-card image-hover fade-in" data-service-name="M-PESA Services">
+                    <img src="https://th.bing.com/th/id/OIP.8BVp30FOB91lAlQ13OFNCwHaE7?rs=1&pid=ImgDetMain" alt="M-PESA Services" class="card-image">
+                    <span class="badge badge-popular">Popular</span>
+                    <h4 class="card-title">M-PESA Services</h4>
+                    <p class="card-description">M-PESA deposits, withdrawals, and mobile money services.</p>
+                    <div class="star-rating" aria-label="4.9 out of 5 stars">
+                        <span>★★★★★</span> <span class="sr-only">4.9 stars</span> (200 reviews)
+                    </div>
+                    <button class="btn btn-outline request-service-btn" data-service="M-PESA Services">Request Service</button>
+                </div>
+
+                <div class="service-card image-hover fade-in" data-service-name="Agent Services">
+                    <img src="https://th.bing.com/th/id/R.4b205247e56913b419f49b4ef6fd3f62?rik=Gdb47LCqvPzxhA&pid=ImgRaw&r=0" alt="Agent Services" class="card-image">
+                    <span class="badge badge-fast">Fast</span>
+                    <h4 class="card-title">Agent Services</h4>
+                    <p class="card-description">Comprehensive agent banking services and support.</p>
+                    <div class="star-rating" aria-label="4.8 out of 5 stars">
+                        <span>★★★★★</span> <span class="sr-only">4.8 stars</span> (150 reviews)
+                    </div>
+                    <button class="btn btn-outline request-service-btn" data-service="Agent Services">Request Service</button>
+                </div>
+
+                <div class="service-card image-hover fade-in" data-service-name="Bank Statement Printing">
+                    <img src="https://cwcreative.com/assets/image-cache/print/document-printing/black-and-white-printing.24bfdb9a.jpg" alt="Bank Statement Printing" class="card-image">
+                    <span class="badge badge-fast">Fast</span>
+                    <h4 class="card-title">Bank Statement Printing</h4>
+                    <p class="card-description">Professional bank statement printing services.</p>
+                    <div class="star-rating" aria-label="4.7 out of 5 stars">
+                        <span>★★★★★</span> <span class="sr-only">4.7 stars</span> (80 reviews)
+                    </div>
+                    <button class="btn btn-outline request-service-btn" data-service="Bank Statement Printing">Request Service</button>
+                </div>
+
+                <div class="service-card image-hover fade-in" data-service-name="Online Banking Assistance">
+                    <img src="https://th.bing.com/th/id/OIP.OAO-SAuiL3703qxNxliiRAHaEO?rs=1&pid=ImgDetMain" alt="Online Banking Assistance" class="card-image">
+                    <span class="badge badge-new">New</span>
+                    <h4 class="card-title">Online Banking Assistance</h4>
+                    <p class="card-description">Help with online banking setup and troubleshooting.</p>
+                    <div class="star-rating" aria-label="4.6 out of 5 stars">
+                        <span>★★★★★</span> <span class="sr-only">4.6 stars</span> (60 reviews)
+                    </div>
+                    <button class="btn btn-outline request-service-btn" data-service="Online Banking Assistance">Request Service</button>
+                </div>
+            </div>
+
+            <!-- 3. Education Services -->
+            <h3 class="category-title fade-in"><span data-lucide="graduation-cap"></span> 🎓 EDUCATIONAL SERVICES...</h3>
+            <div class="products-services-grid">
+                <div class="service-card image-hover fade-in" data-service-name="Online School Portal Access">
+                    <img src="https://admin.12grids.com/uploads/blogs/original_cover_images/Webp/Basics_Of_Responsive_Web_Design_12Grids.webp" alt="Online School Portal Access" class="card-image">
+                    <span class="badge badge-popular">Popular</span>
+                    <h4 class="card-title">Online School Portal Access</h4>
+                    <p class="card-description">Assistance with accessing and navigating school portals.</p>
+                    <div class="star-rating" aria-label="4.8 out of 5 stars">
+                        <span>★★★★★</span> <span class="sr-only">4.8 stars</span> (90 reviews)
+                    </div>
+                    <button class="btn btn-outline request-service-btn" data-service="Online School Portal Access">Request Service</button>
+                </div>
+
+                <div class="service-card image-hover fade-in" data-service-name="Exam Registration">
+                    <img src="https://th.bing.com/th/id/OIP.X4FHpexM2MjTxFNAtWcT1AHaFO?rs=1&pid=ImgDetMain" alt="Exam Registration" class="card-image">
+                    <span class="badge badge-fast">Fast</span>
+                    <h4 class="card-title">Exam Registration</h4>
+                    <p class="card-description">Help with exam registration processes and requirements.</p>
+                    <div class="star-rating" aria-label="4.7 out of 5 stars">
+                        <span>★★★★★</span> <span class="sr-only">4.7 stars</span> (75 reviews)
+                    </div>
+                    <button class="btn btn-outline request-service-btn" data-service="Exam Registration">Request Service</button>
+                </div>
+
+                <div class="service-card image-hover fade-in" data-service-name="eLearning Platform Support">
+                    <img src="https://a.storyblok.com/f/165154/1280x720/551b2a3be9/01_enterprise-ecommerce-platforms.png/m/" alt="eLearning Platform Support" class="card-image">
+                    <span class="badge badge-new">New</span>
+                    <h4 class="card-title">eLearning Platform Support</h4>
+                    <p class="card-description">Technical support for online learning platforms and tools.</p>
+                    <div class="star-rating" aria-label="4.9 out of 5 stars">
+                        <span>★★★★★</span> <span class="sr-only">4.9 stars</span> (50 reviews)
+                    </div>
+                    <button class="btn btn-outline request-service-btn" data-service="eLearning Platform Support">Request Service</button>
+                </div>
+
+                <div class="service-card image-hover fade-in" data-service-name="Certificates & Awards Design">
+                    <img src="https://masterbundles.com/wp-content/uploads/2023/03/1-mockup--88.jpg" alt="Certificates & Awards Design" class="card-image">
+                    <span class="badge badge-specialty">Specialty</span>
+                    <h4 class="card-title">Certificates & Awards Design</h4>
+                    <p class="card-description">Academic certificates printing, layout design, and awards creation.</p>
+                    <div class="star-rating" aria-label="5.0 out of 5 stars">
+                        <span>★★★★★</span> <span class="sr-only">5.0 stars</span> (40 reviews)
+                    </div>
+                    <button class="btn btn-outline request-service-btn" data-service="Certificates & Awards Design">Request Service</button>
+                </div>
+            </div>
+
+            <!-- 4. Typing, Printing & Documentation Services -->
+            <h3 class="category-title fade-in"><span data-lucide="file-edit"></span> 🖋 TYPING, PRINTING & DOCUMENTATION SERVICES...</h3>
+            <div class="products-services-grid">
+                <div class="service-card image-hover fade-in" data-service-name="Typing & Writing">
+                    <img src="https://th.bing.com/th/id/OIP.F9DDdtn7vSA3KYL3YD9KkAHaFj?rs=1&pid=ImgDetMain" alt="Typing & Writing" class="card-image">
+                    <span class="badge badge-popular">Popular</span>
+                    <h4 class="card-title">Typing & Writing</h4>
+                    <p class="card-description">Document typing, CV/resume writing, and application letters.</p>
+                    <div class="star-rating" aria-label="4.9 out of 5 stars">
+                        <span>★★★★★</span> <span class="sr-only">4.9 stars</span> (180 reviews)
+                    </div>
+                    <button class="btn btn-outline request-service-btn" data-service="Typing & Writing">Request Service</button>
+                </div>
+
+                <div class="service-card image-hover fade-in" data-service-name="Printing & Copying">
+                    <img src="https://th.bing.com/th/id/OIP.8BVp30FOB91lAlQ13OFNCwHaE7?rs=1&pid=ImgDetMain" alt="Printing & Copying" class="card-image">
+                    <span class="badge badge-fast">Fast</span>
+                    <h4 class="card-title">Printing & Copying</h4>
+                    <p class="card-description">High-quality printing, photocopying, scanning, binding, and lamination.</p>
+                    <div class="star-rating" aria-label="4.8 out of 5 stars">
+                        <span>★★★★★</span> <span class="sr-only">4.8 stars</span> (250 reviews)
+                    </div>
+                    <button class="btn btn-outline request-service-btn" data-service="Printing & Copying">Request Service</button>
+                </div>
+
+                <div class="service-card image-hover fade-in" data-service-name="Certificate Printing">
+                    <img src="https://masterbundles.com/wp-content/uploads/2023/03/1-mockup--88.jpg" alt="Certificate Printing" class="card-image">
+                    <span class="badge badge-specialty">Specialty</span>
+                    <h4 class="card-title">Certificate Printing</h4>
+                    <p class="card-description">Professional certificate printing with high-quality materials.</p>
+                    <div class="star-rating" aria-label="5.0 out of 5 stars">
+                        <span>★★★★★</span> <span class="sr-only">5.0 stars</span> (70 reviews)
+                    </div>
+                    <button class="btn btn-outline request-service-btn" data-service="Certificate Printing">Request Service</button>
+                </div>
+
+                <div class="service-card image-hover fade-in" data-service-name="Eulogy Design & Print">
+                    <img src="https://cdn.wallpapersafari.com/65/25/mfyQzr.jpg" alt="Eulogy Design & Print" class="card-image">
+                    <span class="badge badge-specialty">Specialty</span>
+                    <h4 class="card-title">Eulogy Design & Print</h4>
+                    <p class="card-description">Compassionate eulogy design and professional printing services.</p>
+                    <div class="star-rating" aria-label="5.0 out of 5 stars">
+                        <span>★★★★★</span> <span class="sr-only">5.0 stars</span> (35 reviews)
+                    </div>
+                    <button class="btn btn-outline request-service-btn" data-service="Eulogy Design & Print">Request Service</button>
+                </div>
+            </div>
+
+            <!-- 5. Design & Branding Services -->
+            <h3 class="category-title fade-in"><span data-lucide="palette"></span> 🎨 DESIGN & BRANDING SERVICES...</h3>
+            <div class="products-services-grid">
+                <div class="service-card image-hover fade-in" data-service-name="Graphic Design">
+                    <img src="https://assets-global.website-files.com/636fb1f9a8142804e18d840b/64919449c692e3cd2109b472_Branding.jpg" alt="Graphic Design" class="card-image">
+                    <span class="badge badge-popular">Popular</span>
+                    <h4 class="card-title">Graphic Design</h4>
+                    <p class="card-description">Logo design, business cards, brochures, posters, packaging design, and digital illustrations.</p>
+                    <div class="star-rating" aria-label="5.0 out of 5 stars">
+                        <span>★★★★★</span> <span class="sr-only">5.0 stars</span> (200 reviews)
+                    </div>
+                    <button class="btn btn-outline request-service-btn" data-service="Graphic Design">Request Service</button>
+                </div>
+
+                <div class="service-card image-hover fade-in" data-service-name="Branding">
+                    <img src="https://th.bing.com/th/id/OIP.kmSpmx399T2pXk7-bZq9ZwHaDO?rs=1&pid=ImgDetMain" alt="Branding" class="card-image">
+                    <span class="badge badge-specialty">Specialty</span>
+                    <h4 class="card-title">Branding</h4>
+                    <p class="card-description">Business & product branding, promotional material design, event & personal branding.</p>
+                    <div class="star-rating" aria-label="4.9 out of 5 stars">
+                        <span>★★★★★</span> <span class="sr-only">4.9 stars</span> (150 reviews)
+                    </div>
+                    <button class="btn btn-outline request-service-btn" data-service="Branding">Request Service</button>
+                </div>
+
+                <div class="service-card image-hover fade-in" data-service-name="UI/UX Design">
+                    <img src="https://th.bing.com/th/id/OIP.X4FHpexM2MjTxFNAtWcT1AHaFO?rs=1&pid=ImgDetMain" alt="UI/UX Design" class="card-image">
+                    <span class="badge badge-new">New</span>
+                    <h4 class="card-title">UI/UX Design</h4>
+                    <p class="card-description">User interface design, user experience optimization, and interactive design solutions.</p>
+                    <div class="star-rating" aria-label="5.0 out of 5 stars">
+                        <span>★★★★★</span> <span class="sr-only">5.0 stars</span> (80 reviews)
+                    </div>
+                    <button class="btn btn-outline request-service-btn" data-service="UI/UX Design">Request Service</button>
+                </div>
+
+                <div class="service-card image-hover fade-in" data-service-name="Motion Graphics">
+                    <img src="https://th.bing.com/th/id/OIP.VPOWFANyVCojH-dvRyR7nwHaE8?rs=1&pid=ImgDetMain" alt="Motion Graphics" class="card-image">
+                    <span class="badge badge-specialty">Specialty</span>
+                    <h4 class="card-title">Motion Graphics</h4>
+                    <p class="card-description">Animated graphics, video graphics, and dynamic visual content creation.</p>
+                    <div class="star-rating" aria-label="4.8 out of 5 stars">
+                        <span>★★★★★</span> <span class="sr-only">4.8 stars</span> (60 reviews)
+                    </div>
+                    <button class="btn btn-outline request-service-btn" data-service="Motion Graphics">Request Service</button>
+                </div>
+
+                <div class="service-card image-hover fade-in" data-service-name="Marketing Collateral">
+                    <img src="https://masterbundles.com/wp-content/uploads/2023/03/1-mockup--88.jpg" alt="Marketing Collateral" class="card-image">
+                    <span class="badge badge-popular">Popular</span>
+                    <h4 class="card-title">Marketing Collateral</h4>
+                    <p class="card-description">Promotional materials, product mockups, infographics, and marketing assets.</p>
+                    <div class="star-rating" aria-label="4.9 out of 5 stars">
+                        <span>★★★★★</span> <span class="sr-only">4.9 stars</span> (120 reviews)
+                    </div>
+                    <button class="btn btn-outline request-service-btn" data-service="Marketing Collateral">Request Service</button>
+                </div>
+
+                <div class="service-card image-hover fade-in" data-service-name="Social Media Graphics">
+                    <img src="https://th.bing.com/th/id/OIP.9AtYwap7v7dligcoIQo51QHaE8?rs=1&pid=ImgDetMain" alt="Social Media Graphics" class="card-image">
+                    <span class="badge badge-fast">Fast</span>
+                    <h4 class="card-title">Social Media Graphics</h4>
+                    <p class="card-description">Social media posts, stories, covers, and digital marketing graphics.</p>
+                    <div class="star-rating" aria-label="4.8 out of 5 stars">
+                        <span>★★★★★</span> <span class="sr-only">4.8 stars</span> (140 reviews)
+                    </div>
+                    <button class="btn btn-outline request-service-btn" data-service="Social Media Graphics">Request Service</button>
+                </div>
+            </div>
+
+            <!-- 6. Web Design & Development Services -->
+            <h3 class="category-title fade-in"><span data-lucide="globe"></span> 🌍 WEB DESIGN & DEVELOPMENT SERVICES...</h3>
+            <div class="products-services-grid">
+                <div class="service-card image-hover fade-in" data-service-name="Website Layout Design">
+                    <img src="https://admin.12grids.com/uploads/blogs/original_cover_images/Webp/Basics_Of_Responsive_Web_Design_12Grids.webp" alt="Website Layout Design" class="card-image">
+                    <span class="badge badge-popular">Popular</span>
+                    <h4 class="card-title">Website Layout Design</h4>
+                    <p class="card-description">Responsive web design, wireframe creation, and modern website layouts.</p>
+                    <div class="star-rating" aria-label="5.0 out of 5 stars">
+                        <span>★★★★★</span> <span class="sr-only">5.0 stars</span> (180 reviews)
+                    </div>
+                    <button class="btn btn-outline request-service-btn" data-service="Website Layout Design">Request Service</button>
+                </div>
+
+                <div class="service-card image-hover fade-in" data-service-name="Website Coding">
+                    <img src="https://th.bing.com/th/id/OIP.OAO-SAuiL3703qxNxliiRAHaEO?rs=1&pid=ImgDetMain" alt="Website Coding" class="card-image">
+                    <span class="badge badge-fast">Fast</span>
+                    <h4 class="card-title">Website Coding</h4>
+                    <p class="card-description">Clean HTML/CSS coding, JavaScript integration, and website prototyping.</p>
+                    <div class="star-rating" aria-label="4.9 out of 5 stars">
+                        <span>★★★★★</span> <span class="sr-only">4.9 stars</span> (130 reviews)
+                    </div>
+                    <button class="btn btn-outline request-service-btn" data-service="Website Coding">Request Service</button>
+                </div>
+
+                <div class="service-card image-hover fade-in" data-service-name="CMS Integration">
+                    <img src="https://th.bing.com/th/id/OIP.NNxz-VSFasexEsg7sQR7bgHaHa?rs=1&pid=ImgDetMain" alt="CMS Integration" class="card-image">
+                    <span class="badge badge-specialty">Specialty</span>
+                    <h4 class="card-title">CMS Integration</h4>
+                    <p class="card-description">WordPress integration, content management systems, and theme customization.</p>
+                    <div class="star-rating" aria-label="4.8 out of 5 stars">
+                        <span>★★★★★</span> <span class="sr-only">4.8 stars</span> (90 reviews)
+                    </div>
+                    <button class="btn btn-outline request-service-btn" data-service="CMS Integration">Request Service</button>
+                </div>
+
+                <div class="service-card image-hover fade-in" data-service-name="SEO Optimization">
+                    <img src="https://th.bing.com/th/id/OIP.5XGpu53Un5p-ZQhPdv2gEAHaD4?w=1200&h=630&rs=1&pid=ImgDetMain" alt="SEO Optimization" class="card-image">
+                    <span class="badge badge-popular">Popular</span>
+                    <h4 class="card-title">SEO Optimization</h4>
+                    <p class="card-description">Search engine optimization, user testing, and accessibility compliance.</p>
+                    <div class="star-rating" aria-label="4.9 out of 5 stars">
+                        <span>★★★★★</span> <span class="sr-only">4.9 stars</span> (110 reviews)
+                    </div>
+                    <button class="btn btn-outline request-service-btn" data-service="SEO Optimization">Request Service</button>
+                </div>
+
+                <div class="service-card image-hover fade-in" data-service-name="E-commerce Setup">
+                    <img src="https://a.storyblok.com/f/165154/1280x720/551b2a3be9/01_enterprise-ecommerce-platforms.png/m/" alt="E-commerce Setup" class="card-image">
+                    <span class="badge badge-new">New</span>
+                    <h4 class="card-title">E-commerce Setup</h4>
+                    <p class="card-description">Online store setup, payment integration, and e-commerce solutions.</p>
+                    <div class="star-rating" aria-label="5.0 out of 5 stars">
+                        <span>★★★★★</span> <span class="sr-only">5.0 stars</span> (70 reviews)
+                    </div>
+                    <button class="btn btn-outline request-service-btn" data-service="E-commerce Setup">Request Service</button>
+                </div>
+
+                <div class="service-card image-hover fade-in" data-service-name="Database Design">
+                    <img src="https://th.bing.com/th/id/R.4b205247e56913b419f49b4ef6fd3f62?rik=Gdb47LCqvPzxhA&pid=ImgRaw&r=0" alt="Database Design" class="card-image">
+                    <span class="badge badge-specialty">Specialty</span>
+                    <h4 class="card-title">Database Design</h4>
+                    <p class="card-description">Database design, API integration, and custom forms development.</p>
+                    <div class="star-rating" aria-label="4.8 out of 5 stars">
+                        <span>★★★★★</span> <span class="sr-only">4.8 stars</span> (55 reviews)
+                    </div>
+                    <button class="btn btn-outline request-service-btn" data-service="Database Design">Request Service</button>
+                </div>
+            </div>
+
+            <!-- 7. Online & Internet Services -->
+            <h3 class="category-title fade-in"><span data-lucide="wifi"></span> 🌐 ONLINE & INTERNET RELATED SERVICES...</h3>
+            <div class="products-services-grid">
+                <div class="service-card image-hover fade-in" data-service-name="Email Account Creation">
+                    <img src="https://th.bing.com/th/id/OIP.Mp5_GkhRUvYFfBO_Odln1gHaFQ?rs=1&pid=ImgDetMain" alt="Email Account Creation" class="card-image">
+                    <span class="badge badge-fast">Fast</span>
+                    <h4 class="card-title">Email Account Creation</h4>
+                    <p class="card-description">Professional email setup and configuration services.</p>
+                    <div class="star-rating" aria-label="4.8 out of 5 stars">
+                        <span>★★★★★</span> <span class="sr-only">4.8 stars</span> (100 reviews)
+                    </div>
+                    <button class="btn btn-outline request-service-btn" data-service="Email Account Creation">Request Service</button>
+                </div>
+
+                <div class="service-card image-hover fade-in" data-service-name="Social Media Account Setup">
+                    <img src="https://th.bing.com/th/id/OIP.9AtYwap7v7dligcoIQo51QHaE8?rs=1&pid=ImgDetMain" alt="Social Media Account Setup" class="card-image">
+                    <span class="badge badge-popular">Popular</span>
+                    <h4 class="card-title">Social Media Account Setup</h4>
+                    <p class="card-description">Social media account creation and optimization services.</p>
+                    <div class="star-rating" aria-label="4.7 out of 5 stars">
+                        <span>★★★★★</span> <span class="sr-only">4.7 stars</span> (120 reviews)
+                    </div>
+                    <button class="btn btn-outline request-service-btn" data-service="Social Media Account Setup">Request Service</button>
+                </div>
+
+                <div class="service-card image-hover fade-in" data-service-name="Job Applications">
+                    <img src="https://th.bing.com/th/id/OIP.UeIr1fyHsEYUnZ5yD_thUwHaE8?rs=1&pid=ImgDetMain" alt="Job Applications" class="card-image">
+                    <span class="badge badge-specialty">Specialty</span>
+                    <h4 class="card-title">Job Applications</h4>
+                    <p class="card-description">Online job application assistance and career support.</p>
+                    <div class="star-rating" aria-label="4.9 out of 5 stars">
+                        <span>★★★★★</span> <span class="sr-only">4.9 stars</span> (85 reviews)
+                    </div>
+                    <button class="btn btn-outline request-service-btn" data-service="Job Applications">Request Service</button>
+                </div>
+
+                <div class="service-card image-hover fade-in" data-service-name="Government Account Registration">
+                    <img src="https://th.bing.com/th/id/OIP.NNxz-VSFasexEsg7sQR7bgHaHa?rs=1&pid=ImgDetMain" alt="Government Account Registration" class="card-image">
+                    <span class="badge badge-new">New</span>
+                    <h4 class="card-title">Government Account Registration</h4>
+                    <p class="card-description">Government and private account registration services.</p>
+                    <div class="star-rating" aria-label="4.8 out of 5 stars">
+                        <span>★★★★★</span> <span class="sr-only">4.8 stars</span> (70 reviews)
+                    </div>
+                    <button class="btn btn-outline request-service-btn" data-service="Government Account Registration">Request Service</button>
+                </div>
+
+                <div class="service-card image-hover fade-in" data-service-name="Online Form Filling">
+                    <img src="https://images.template.net/wp-content/uploads/2016/12/27061959/Business-Order-Form-Template.jpg" alt="Online Form Filling" class="card-image">
+                    <span class="badge badge-fast">Fast</span>
+                    <h4 class="card-title">Online Form Filling</h4>
+                    <p class="card-description">Professional online form completion and submission services.</p>
+                    <div class="star-rating" aria-label="4.7 out of 5 stars">
+                        <span>★★★★★</span> <span class="sr-only">4.7 stars</span> (90 reviews)
+                    </div>
+                    <button class="btn btn-outline request-service-btn" data-service="Online Form Filling">Request Service</button>
+                </div>
+
+                <div class="service-card image-hover fade-in" data-service-name="Zoom/Teams Setup & Support">
+                    <img src="https://th.bing.com/th/id/OIP.OAO-SAuiL3703qxNxliiRAHaEO?rs=1&pid=ImgDetMain" alt="Zoom/Teams Setup & Support" class="card-image">
+                    <span class="badge badge-popular">Popular</span>
+                    <h4 class="card-title">Zoom/Teams Setup & Support</h4>
+                    <p class="card-description">Video conferencing setup and technical support services.</p>
+                    <div class="star-rating" aria-label="4.9 out of 5 stars">
+                        <span>★★★★★</span> <span class="sr-only">4.9 stars</span> (110 reviews)
+                    </div>
+                    <button class="btn btn-outline request-service-btn" data-service="Zoom/Teams Setup & Support">Request Service</button>
+                </div>
+            </div>
+
+            <!-- 8. ICT & Technical Services -->
+            <h3 class="category-title fade-in"><span data-lucide="settings"></span> 🛠 ICT AND TECHNICAL SUPPORT CENTER...</h3>
+            <div class="products-services-grid">
+                <div class="service-card image-hover fade-in" data-service-name="Software Installation">
+                    <img src="https://th.bing.com/th/id/R.5d2ce835b52458d8e9f5932e7147b56c?rik=h0FHpibFQR4K%2bg&pid=ImgRaw&r=0" alt="Software Installation" class="card-image">
+                    <span class="badge badge-popular">Popular</span>
+                    <h4 class="card-title">Software Installation</h4>
+                    <p class="card-description">MS Office, Antivirus, and various software installation services.</p>
+                    <div class="star-rating" aria-label="4.8 out of 5 stars">
+                        <span>★★★★★</span> <span class="sr-only">4.8 stars</span> (150 reviews)
+                    </div>
+                    <button class="btn btn-outline request-service-btn" data-service="Software Installation">Request Service</button>
+                </div>
+
+                <div class="service-card image-hover fade-in" data-service-name="Basic Computer Training">
+                    <img src="https://th.bing.com/th/id/OIP.UeIr1fyHsEYUnZ5yD_thUwHaE8?rs=1&pid=ImgDetMain" alt="Basic Computer Training" class="card-image">
+                    <span class="badge badge-specialty">Specialty</span>
+                    <h4 class="card-title">Basic Computer Training</h4>
+                    <p class="card-description">Computer literacy training and basic technical skills development.</p>
+                    <div class="star-rating" aria-label="4.9 out of 5 stars">
+                        <span>★★★★★</span> <span class="sr-only">4.9 stars</span> (80 reviews)
+                    </div>
+                    <button class="btn btn-outline request-service-btn" data-service="Basic Computer Training">Request Service</button>
+                </div>
+
+                <div class="service-card image-hover fade-in" data-service-name="Data Entry Services">
+                    <img src="https://th.bing.com/th/id/OIP.F9DDdtn7vSA3KYL3YD9KkAHaFj?rs=1&pid=ImgDetMain" alt="Data Entry Services" class="card-image">
+                    <span class="badge badge-fast">Fast</span>
+                    <h4 class="card-title">Data Entry Services</h4>
+                    <p class="card-description">Professional data entry and database management services.</p>
+                    <div class="star-rating" aria-label="4.7 out of 5 stars">
+                        <span>★★★★★</span> <span class="sr-only">4.7 stars</span> (120 reviews)
+                    </div>
+                    <button class="btn btn-outline request-service-btn" data-service="Data Entry Services">Request Service</button>
+                </div>
+
+                <div class="service-card image-hover fade-in" data-service-name="Digital File Formatting">
+                    <img src="https://th.bing.com/th/id/R.4b205247e56913b419f49b4ef6fd3f62?rik=Gdb47LCqvPzxhA&pid=ImgRaw&r=0" alt="Digital File Formatting" class="card-image">
+                    <span class="badge badge-new">New</span>
+                    <h4 class="card-title">Digital File Formatting</h4>
+                    <p class="card-description">PDF creation, document scanning, and digital file conversion services.</p>
+                    <div class="star-rating" aria-label="4.8 out of 5 stars">
+                        <span>★★★★★</span> <span class="sr-only">4.8 stars</span> (95 reviews)
+                    </div>
+                    <button class="btn btn-outline request-service-btn" data-service="Digital File Formatting">Request Service</button>
+                </div>
+
+                <div class="service-card image-hover fade-in" data-service-name="Document Scanning & Editing">
+                    <img src="https://th.bing.com/th/id/R.4b205247e56913b419f49b4ef6fd3f62?rik=Gdb47LCqvPzxhA&pid=ImgRaw&r=0" alt="Document Scanning & Editing" class="card-image">
+                    <span class="badge badge-fast">Fast</span>
+                    <h4 class="card-title">Document Scanning & Editing</h4>
+                    <p class="card-description">High-resolution document scanning and digital editing for technical use.</p>
+                    <div class="star-rating" aria-label="4.6 out of 5 stars">
+                        <span>★★★★★</span> <span class="sr-only">4.6 stars</span> (75 reviews)
+                    </div>
+                    <button class="btn btn-outline request-service-btn" data-service="Document Scanning & Editing">Request Service</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section container">
+            <h2 class="section-title text-gradient fade-in">About GraphiCom</h2>
+            <div class="about-content">
+                <div class="about-text fade-in">
+                    <p>At GraphiCom, we are your comprehensive solution for all digital, administrative, and creative needs. We specialize in bridging the gap between complex government processes and accessible, professional services. Our expertise spans across multiple domains:</p>
+                    <ul>
+                        <li><span data-lucide="check-circle" class="icon-check-circle"></span> Government Services & Administrative Support</li>
+                        <li><span data-lucide="check-circle" class="icon-check-circle"></span> Banking & Financial Services</li>
+                        <li><span data-lucide="check-circle" class="icon-check-circle"></span> Professional Printing & Documentation</li>
+                        <li><span data-lucide="check-circle" class="icon-check-circle"></span> Creative Design & Branding Solutions</li>
+                        <li><span data-lucide="check-circle" class="icon-check-circle"></span> Web Development & Digital Marketing</li>
+                        <li><span data-lucide="check-circle" class="icon-check-circle"></span> Education & Training Services</li>
+                        <li><span data-lucide="check-circle" class="icon-check-circle"></span> ICT & Technical Support</li>
+                    </ul>
+                    <p>Our mission is to simplify complex processes, deliver exceptional quality, and provide personalized service that exceeds expectations. We combine traditional service excellence with modern digital solutions to serve individuals, businesses, and organizations across Kenya.</p>
+                </div>
+                <div class="about-image fade-in">
+                    <img src="https://th.bing.com/th/id/OIP.UeIr1fyHsEYUnZ5yD_thUwHaE8?rs=1&pid=ImgDetMain" alt="GraphiCom Services Overview">
+                </div>
+            </div>
+        </section>
+
+        <!-- CEO Section -->
+        <section id="ceo-founder" class="ceo-section container">
+            <h2 class="section-title text-gradient fade-in">Meet Our Founder</h2>
+            <div class="ceo-content">
+                <div class="ceo-image fade-in">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-06-19%20at%2008.17.49_9c6ba824.jpg-W7mSCxosBD697lZio0etgvFLZCvQ6R.jpeg" alt="Fred Martin Mugane Mwai - Founder of GraphiCom">
+                </div>
+                <div class="ceo-text fade-in">
+                    <h3 class="ceo-name">Fred Martin Mugane Mwai</h3>
+                    <p class="ceo-title">Founder & CEO, GraphiCom</p>
+                    <p>With a passion for innovation and a commitment to excellence, Fred founded GraphiCom to bridge the gap between complex administrative processes and accessible, high-quality services. His vision encompasses empowering individuals and businesses through comprehensive digital solutions, professional services, and personalized support.</p>
+                    <p>Under Fred's leadership, GraphiCom has grown to become a trusted partner for government services, creative solutions, and technical support, always prioritizing client satisfaction and service excellence.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section container">
+            <h2 class="section-title text-gradient fade-in">Get in Touch</h2>
+            <div class="contact-grid">
+                <div class="contact-info fade-in">
+                    <p>Ready to get started? Contact us today for all your government services, printing, design, and digital solution needs. We're here to help!</p>
+                    <ul class="contact-list">
+                        <li><span data-lucide="phone"></span> <strong>Phone:</strong> <a href="tel:0795367770">0795367770</a></li>
+                        <li><span data-lucide="phone"></span> <strong>Phone:</strong> <a href="tel:0103931102">0103931102</a></li>
+                        <li><span data-lucide="mail"></span> <strong>Email:</strong> <a href="mailto:fredmartinmugane@gmail.com">fredmartinmugane@gmail.com</a></li>
+                        <li><span data-lucide="map-pin"></span> <strong>Location:</strong> Freelancer</li>
+                        <li><span data-lucide="message-square"></span> <strong>WhatsApp:</strong> <a href="https://wa.me/254795367770" target="_blank">Chat on WhatsApp</a></li>
+                    </ul>
+                    <div class="social-contact-icons">
+                        <a href="#" aria-label="GraphiCom on Facebook"><span data-lucide="facebook"></span></a>
+                        <a href="#" aria-label="GraphiCom on Twitter"><span data-lucide="twitter"></span></a>
+                        <a href="#" aria-label="GraphiCom on LinkedIn"><span data-lucide="linkedin"></span></a>
+                        <a href="#" aria-label="GraphiCom on Instagram"><span data-lucide="instagram"></span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Fixed WhatsApp Button -->
+    <a href="https://wa.me/254795367770" target="_blank" class="whatsapp-fab" aria-label="Chat with us on WhatsApp">
+        <span data-lucide="message-square"></span>
+        <span>WhatsApp</span>
+    </a>
+
+    <!-- Scroll-to-top Button -->
+    <button class="scroll-to-top" aria-label="Scroll to top of page">
+        <span data-lucide="chevron-up"></span>
+    </button>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="current-year"></span> GraphiCom. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="#" aria-label="GraphiCom on Facebook"><span data-lucide="facebook"></span></a>
+                <a href="#" aria-label="GraphiCom on Twitter"><span data-lucide="twitter"></span></a>
+                <a href="#" aria-label="GraphiCom on LinkedIn"><span data-lucide="linkedin"></span></a>
+                <a href="#" aria-label="GraphiCom on Instagram"><span data-lucide="instagram"></span></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initialize Lucide icons
+            lucide.createIcons();
+
+            // Set current year
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+
+            // Theme Switch Logic
+            const themeToggle = document.getElementById('checkbox');
+            const htmlElement = document.documentElement;
+
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                htmlElement.setAttribute('data-theme', savedTheme);
+                themeToggle.checked = (savedTheme === 'dark');
+            } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                htmlElement.setAttribute('data-theme', 'dark');
+                themeToggle.checked = true;
+            } else {
+                htmlElement.setAttribute('data-theme', 'light');
+                themeToggle.checked = false;
+            }
+
+            themeToggle.addEventListener('change', () => {
+                if (themeToggle.checked) {
+                    htmlElement.setAttribute('data-theme', 'dark');
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    htmlElement.setAttribute('data-theme', 'light');
+                    localStorage.setItem('theme', 'light');
+                }
+            });
+
+            // Sticky Header
+            const header = document.querySelector('.header');
+            const heroSection = document.querySelector('.hero-section');
+
+            const checkStickyHeader = () => {
+                if (window.scrollY > heroSection.offsetHeight - header.offsetHeight) {
+                    header.classList.add('sticky');
+                } else {
+                    header.classList.remove('sticky');
+                }
+            };
+            window.addEventListener('scroll', checkStickyHeader);
+            checkStickyHeader();
+
+            // Mobile Menu Toggle
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navList = document.getElementById('main-nav-list');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            menuToggle.addEventListener('click', () => {
+                menuToggle.classList.toggle('active');
+                navList.classList.toggle('active');
+                const expanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
+                menuToggle.setAttribute('aria-expanded', !expanded);
+            });
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (navList.classList.contains('active')) {
+                        menuToggle.classList.remove('active');
+                        navList.classList.remove('active');
+                        menuToggle.setAttribute('aria-expanded', 'false');
+                    }
+                });
+            });
+
+            // Typing Effect
+            const typingTextElement = document.querySelector('.typing-text');
+            const words = JSON.parse(typingTextElement.dataset.words);
+            let wordIndex = 0;
+            let charIndex = 0;
+            let isDeleting = false;
+
+            function type() {
+                const currentWord = words[wordIndex];
+                if (isDeleting) {
+                    typingTextElement.textContent = currentWord.substring(0, charIndex - 1);
+                    charIndex--;
+                } else {
+                    typingTextElement.textContent = currentWord.substring(0, charIndex + 1);
+                    charIndex++;
+                }
+
+                let currentSpeed = isDeleting ? 100 : 150;
+
+                if (!isDeleting && charIndex === currentWord.length) {
+                    currentSpeed = 2000;
+                    isDeleting = true;
+                } else if (isDeleting && charIndex === 0) {
+                    isDeleting = false;
+                    wordIndex = (wordIndex + 1) % words.length;
+                    currentSpeed = 1000;
+                }
+
+                setTimeout(type, currentSpeed);
+            }
+
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                type();
+            } else {
+                typingTextElement.textContent = words[0];
+            }
+
+            // Scroll-to-top Button
+            const scrollToTopBtn = document.querySelector('.scroll-to-top');
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    scrollToTopBtn.classList.add('show');
+                } else {
+                    scrollToTopBtn.classList.remove('show');
+                }
+            });
+
+            scrollToTopBtn.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+
+            // Fade-in Animation
+            const fadeInElements = document.querySelectorAll('.fade-in');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            fadeInElements.forEach(el => {
+                observer.observe(el);
+            });
+
+            // Service Request Buttons
+            const requestServiceButtons = document.querySelectorAll('.request-service-btn');
+            const whatsappNumber = '254795367770';
+
+            requestServiceButtons.forEach(button => {
+                button.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    const serviceName = event.target.dataset.service;
+                    const encodedService = encodeURIComponent(serviceName);
+                    const whatsappMessage = `Hello GraphiCom, I am interested in ${encodedService}. Can you please provide more information or help me get started?`;
+                    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+                    window.open(whatsappUrl, '_blank');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
