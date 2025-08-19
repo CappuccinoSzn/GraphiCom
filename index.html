@@ -153,6 +153,18 @@
         }
     }
     </script>
+    
+    <!-- Vercel Analytics Web Tracking Script -->
+    <script>
+        window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    </script>
+    <script defer src="https://va.vercel-scripts.com/v1/script.js"></script>
+    
+    <!-- Vercel Speed Insights Web Tracking Script -->
+    <script>
+        window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+    </script>
+    <script defer src="https://va.vercel-scripts.com/v1/speed-insights/script.js"></script>
 
     <style>
         /* CSS Variables */
@@ -1099,6 +1111,33 @@
             stroke-width: 1.5;
         }
 
+        /* Added styles for the "All Systems Functional" status indicator */
+        .status-indicator {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: rgba(34, 197, 94, 0.1);
+            border: 1px solid rgba(34, 197, 94, 0.3);
+            border-radius: 20px;
+            padding: 6px 12px;
+            font-size: 0.75rem;
+            color: #22c55e;
+            margin-bottom: 8px;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #22c55e;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
         /* Animations */
         @keyframes gradientShift {
             0% { background-position: 0% 50%; }
@@ -1944,12 +1983,20 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
+            <!-- Added "All Systems Functional" status indicator -->
+            <div class="status-indicator">
+                <div class="status-dot"></div>
+                <span>All Systems Functional</span>
+            </div>
             <p>&copy; <span id="current-year"></span> GraphiCom. All rights reserved.</p>
+            <!-- Updated social links to only include WhatsApp Channel and Instagram -->
             <div class="social-icons">
-                <a href="#" aria-label="GraphiCom on Facebook"><span data-lucide="facebook"></span></a>
-                <a href="#" aria-label="GraphiCom on Twitter"><span data-lucide="twitter"></span></a>
-                <a href="#" aria-label="GraphiCom on LinkedIn"><span data-lucide="linkedin"></span></a>
-                <a href="#" aria-label="GraphiCom on Instagram"><span data-lucide="instagram"></span></a>
+                <a href="https://whatsapp.com/channel/0029VazHzLW4Crff7hJY0Q3O" target="_blank" aria-label="GraphiCom WhatsApp Channel">
+                    <span data-lucide="message-square"></span>
+                </a>
+                <a href="https://www.instagram.com/graphicom._?igsh=OGQ5ZDc2ODk2ZA==" target="_blank" aria-label="GraphiCom on Instagram">
+                    <span data-lucide="instagram"></span>
+                </a>
             </div>
         </div>
     </footer>
