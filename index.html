@@ -4,13 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="Al5jeDntttbbDOWh9idTVd26zxMI-rm9xGN6rn3oBRs" />
-
-    <!-- Updated favicon links to use the GraphiCom logo -->
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     
+    <!-- Favicon -->
+    <!-- Updated favicon to use GraphiCom logo -->
+    <link rel="icon" type="image/jpeg" href="favicon.jpg">
+
     <!-- Primary Meta Tags -->
     <title>GraphiCom - Your Partner in Digital Solutions & Creative Services | Kenya</title>
     <meta name="title" content="GraphiCom - Your Partner in Digital Solutions & Creative Services | Kenya">
@@ -34,20 +32,22 @@
     <meta property="og:url" content="https://graphicom.shop/">
     <meta property="og:title" content="GraphiCom - Your Partner in Digital Solutions & Creative Services">
     <meta property="og:description" content="GraphiCom offers comprehensive government services, printing, documentation, graphic design, web development, and more. Your one-stop solution for all digital and administrative needs.">
-    <meta property="og:image" content="https://placehold.co/1200x630/007bff/ffffff?text=GraphiCom+Website+Preview">
+    <!-- Updated Open Graph image to use GraphiCom logo -->
+    <meta property="og:image" content="https://graphicom.shop/favicon.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="GraphiCom - Digital Solutions and Creative Services">
+    <meta property="og:image:alt" content="GraphiCom - Digital Solutions and Creative Services Logo">
     <meta property="og:site_name" content="GraphiCom">
     <meta property="og:locale" content="en_KE">
     
     <!-- Twitter Card Meta Tags -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://graphicom.co.ke/">
+    <meta property="twitter:url" content="https://graphicom.shop/">
     <meta property="twitter:title" content="GraphiCom - Your Partner in Digital Solutions & Creative Services">
     <meta property="twitter:description" content="GraphiCom offers comprehensive government services, printing, documentation, graphic design, web development, and more.">
-    <meta property="twitter:image" content="https://placehold.co/1200x630/007bff/ffffff?text=GraphiCom+Website+Preview">
-    <meta property="twitter:image:alt" content="GraphiCom - Digital Solutions and Creative Services">
+    <!-- Updated Twitter image to use GraphiCom logo -->
+    <meta property="twitter:image" content="https://graphicom.shop/favicon.jpg">
+    <meta property="twitter:image:alt" content="GraphiCom - Digital Solutions and Creative Services Logo">
     
     <!-- Additional SEO Meta Tags -->
     <meta name="theme-color" content="#007bff">
@@ -55,13 +55,14 @@
     <meta name="msapplication-config" content="/browserconfig.xml">
     
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://graphicom.co.ke/">
+    <link rel="canonical" href="https://graphicom.shop/">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <!-- Updated all favicon references to use GraphiCom logo -->
+    <link rel="icon" type="image/jpeg" href="/favicon.jpg">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon.jpg">
+    <link rel="icon" type="image/jpeg" sizes="32x32" href="/favicon.jpg">
+    <link rel="icon" type="image/jpeg" sizes="16x16" href="/favicon.jpg">
     <link rel="manifest" href="/site.webmanifest">
     
     <!-- Preconnect for Performance -->
@@ -82,7 +83,7 @@
         "@type": "LocalBusiness",
         "name": "GraphiCom",
         "description": "GraphiCom offers comprehensive government services, printing, documentation, graphic design, web development, banking services, and more. Your one-stop solution for all digital and administrative needs.",
-        "url": "https://graphicom.co.ke/",
+        "url": "https://graphicom.shop/",
         "logo": "https://placehold.co/400x400/007bff/ffffff?text=GraphiCom+Logo",
         "image": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/GraphiCom.jpg-PC3ZorCxunY8RwxaNTHoxe8eG3FK2b.jpeg",
         "telephone": "+254795367770",
@@ -729,6 +730,88 @@
             margin-bottom: var(--spacing-3xl);
         }
 
+        /* Adding styles for category navigation */
+        .category-navigation {
+            background: var(--color-card-background);
+            border: 1px solid var(--color-border);
+            border-radius: var(--border-radius-lg);
+            padding: var(--spacing-xl);
+            margin-bottom: var(--spacing-3xl);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .category-nav-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--color-heading);
+            text-align: center;
+            margin-bottom: var(--spacing-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--spacing-sm);
+        }
+
+        .category-nav-title svg {
+            color: var(--color-primary);
+            width: 24px;
+            height: 24px;
+        }
+
+        .category-nav-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--spacing-md);
+        }
+
+        .category-nav-item {
+            background: var(--color-background);
+            border: 1px solid var(--color-border);
+            border-radius: var(--border-radius-md);
+            padding: var(--spacing-md);
+            text-decoration: none;
+            color: var(--color-text);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            cursor: pointer;
+        }
+
+        .category-nav-item:hover {
+            background: var(--color-primary);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .category-nav-item svg {
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+            color: var(--color-primary);
+            transition: color 0.3s ease;
+        }
+
+        .category-nav-item:hover svg {
+            color: white;
+        }
+
+        .category-nav-text {
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 767px) {
+            .category-nav-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .category-navigation {
+                padding: var(--spacing-md);
+            }
+        }
+
         .category-title {
             font-size: 1.5rem;
             margin-top: var(--spacing-2xl);
@@ -1238,7 +1321,6 @@
                     <p>At GraphiCom, we are your comprehensive solution for all digital, administrative, and creative needs. We specialize in bridging the gap between complex government processes and accessible, professional services. Our expertise spans across multiple domains:</p>
                     <ul>
                         <li><span data-lucide="check-circle" class="icon-check-circle"></span> Government Services & Administrative Support</li>
-                        <li><span data-lucide="check-circle" class="icon-check-circle"></span> Banking & Financial Services</li>
                         <li><span data-lucide="check-circle" class="icon-check-circle"></span> Professional Printing & Documentation</li>
                         <li><span data-lucide="check-circle" class="icon-check-circle"></span> Creative Design & Branding Solutions</li>
                         <li><span data-lucide="check-circle" class="icon-check-circle"></span> Web Development & Digital Marketing</li>
@@ -1273,8 +1355,45 @@
         <section id="products-services" class="products-services-section container">
             <h2 class="section-title text-gradient fade-in">Our Products & Services</h2>
 
+            <div class="category-navigation fade-in">
+                <h3 class="category-nav-title">
+                    <span data-lucide="grid-3x3"></span>
+                    Browse Services by Category
+                </h3>
+                <div class="category-nav-grid">
+                    <a href="#government-services" class="category-nav-item">
+                        <span data-lucide="building-2"></span>
+                        <span class="category-nav-text">Government Services</span>
+                    </a>
+                    <a href="#education-services" class="category-nav-item">
+                        <span data-lucide="graduation-cap"></span>
+                        <span class="category-nav-text">Educational Services</span>
+                    </a>
+                    <a href="#printing-services" class="category-nav-item">
+                        <span data-lucide="file-edit"></span>
+                        <span class="category-nav-text">Typing & Printing</span>
+                    </a>
+                    <a href="#design-services" class="category-nav-item">
+                        <span data-lucide="palette"></span>
+                        <span class="category-nav-text">Design & Branding</span>
+                    </a>
+                    <a href="#web-services" class="category-nav-item">
+                        <span data-lucide="globe"></span>
+                        <span class="category-nav-text">Web Development</span>
+                    </a>
+                    <a href="#online-services" class="category-nav-item">
+                        <span data-lucide="wifi"></span>
+                        <span class="category-nav-text">Online Services</span>
+                    </a>
+                    <a href="#technical-services" class="category-nav-item">
+                        <span data-lucide="settings"></span>
+                        <span class="category-nav-text">Technical Support</span>
+                    </a>
+                </div>
+            </div>
+
             <!-- 1. Government Services -->
-            <h3 class="category-title fade-in"><span data-lucide="building-2"></span> 💼 GOVERNMENTAL SERVICES...</h3>
+            <h3 id="government-services" class="category-title fade-in"><span data-lucide="building-2"></span> 💼 GOVERNMENTAL SERVICES...</h3>
             <div class="products-services-grid">
                 <!-- KRA Services -->
                 <article class="service-card image-hover fade-in" data-service-name="KRA Services">
@@ -1421,56 +1540,8 @@
                 </article>
             </div>
 
-            <!-- 2. Banking & Financial Services -->
-            <h3 class="category-title fade-in"><span data-lucide="credit-card"></span> 💳 BANKING & FINANCIAL SERVICES...</h3>
-            <div class="products-services-grid">
-                <article class="service-card image-hover fade-in" data-service-name="M-PESA Services">
-                    <img src="https://th.bing.com/th/id/OIP.8BVp30FOB91lAlQ13OFNCwHaE7?rs=1&pid=ImgDetMain" alt="M-PESA Services - Mobile money transactions" class="card-image">
-                    <span class="badge badge-popular">Popular</span>
-                    <h4 class="card-title">M-PESA Services</h4>
-                    <p class="card-description">M-PESA deposits, withdrawals, and mobile money services.</p>
-                    <div class="star-rating" aria-label="4.9 out of 5 stars">
-                        <span>★★★★★</span> <span class="sr-only">4.9 stars</span> (200 reviews)
-                    </div>
-                    <button class="btn btn-outline request-service-btn" data-service="M-PESA Services">Request Service</button>
-                </article>
-
-                <article class="service-card image-hover fade-in" data-service-name="Agent Services">
-                    <img src="https://th.bing.com/th/id/R.4b205247e56913b419f49b4ef6fd3f62?rik=Gdb47LCqvPzxhA&pid=ImgRaw&r=0" alt="Agent Services - Banking agent services" class="card-image">
-                    <span class="badge badge-fast">Fast</span>
-                    <h4 class="card-title">Agent Services</h4>
-                    <p class="card-description">Comprehensive agent banking services and support.</p>
-                    <div class="star-rating" aria-label="4.8 out of 5 stars">
-                        <span>★★★★★</span> <span class="sr-only">4.8 stars</span> (150 reviews)
-                    </div>
-                    <button class="btn btn-outline request-service-btn" data-service="Agent Services">Request Service</button>
-                </article>
-
-                <article class="service-card image-hover fade-in" data-service-name="Bank Statement Printing">
-                    <img src="https://cwcreative.com/assets/image-cache/print/document-printing/black-and-white-printing.24bfdb9a.jpg" alt="Bank Statement Printing - Professional document printing" class="card-image">
-                    <span class="badge badge-fast">Fast</span>
-                    <h4 class="card-title">Bank Statement Printing</h4>
-                    <p class="card-description">Professional bank statement printing services.</p>
-                    <div class="star-rating" aria-label="4.7 out of 5 stars">
-                        <span>★★★★★</span> <span class="sr-only">4.7 stars</span> (80 reviews)
-                    </div>
-                    <button class="btn btn-outline request-service-btn" data-service="Bank Statement Printing">Request Service</button>
-                </article>
-
-                <article class="service-card image-hover fade-in" data-service-name="Online Banking Assistance">
-                    <img src="https://th.bing.com/th/id/OIP.OAO-SAuiL3703qxNxliiRAHaEO?rs=1&pid=ImgDetMain" alt="Online Banking Assistance - Digital banking support" class="card-image">
-                    <span class="badge badge-new">New</span>
-                    <h4 class="card-title">Online Banking Assistance</h4>
-                    <p class="card-description">Help with online banking setup and troubleshooting.</p>
-                    <div class="star-rating" aria-label="4.6 out of 5 stars">
-                        <span>★★★★★</span> <span class="sr-only">4.6 stars</span> (60 reviews)
-                    </div>
-                    <button class="btn btn-outline request-service-btn" data-service="Online Banking Assistance">Request Service</button>
-                </article>
-            </div>
-
             <!-- 3. Education Services -->
-            <h3 class="category-title fade-in"><span data-lucide="graduation-cap"></span> 🎓 EDUCATIONAL SERVICES...</h3>
+            <h3 id="education-services" class="category-title fade-in"><span data-lucide="graduation-cap"></span> 🎓 EDUCATIONAL SERVICES...</h3>
             <div class="products-services-grid">
                 <article class="service-card image-hover fade-in" data-service-name="Online School Portal Access">
                     <img src="https://admin.12grids.com/uploads/blogs/original_cover_images/Webp/Basics_Of_Responsive_Web_Design_12Grids.webp" alt="Online School Portal Access - Educational platform support" class="card-image">
@@ -1518,7 +1589,7 @@
             </div>
 
             <!-- 4. Typing, Printing & Documentation Services -->
-            <h3 class="category-title fade-in"><span data-lucide="file-edit"></span> 🖋 TYPING, PRINTING & DOCUMENTATION SERVICES...</h3>
+            <h3 id="printing-services" class="category-title fade-in"><span data-lucide="file-edit"></span> 🖋 TYPING, PRINTING & DOCUMENTATION SERVICES...</h3>
             <div class="products-services-grid">
                 <article class="service-card image-hover fade-in" data-service-name="Typing & Writing">
                     <img src="https://th.bing.com/th/id/OIP.F9DDdtn7vSA3KYL3YD9KkAHaFj?rs=1&pid=ImgDetMain" alt="Typing & Writing - Document typing and writing services" class="card-image">
@@ -1566,7 +1637,7 @@
             </div>
 
             <!-- 5. Design & Branding Services -->
-            <h3 class="category-title fade-in"><span data-lucide="palette"></span> 🎨 DESIGN & BRANDING SERVICES...</h3>
+            <h3 id="design-services" class="category-title fade-in"><span data-lucide="palette"></span> 🎨 DESIGN & BRANDING SERVICES...</h3>
             <div class="products-services-grid">
                 <article class="service-card image-hover fade-in" data-service-name="Graphic Design">
                     <img src="https://assets-global.website-files.com/636fb1f9a8142804e18d840b/64919449c692e3cd2109b472_Branding.jpg" alt="Graphic Design - Logo and brand design services" class="card-image">
@@ -1636,7 +1707,7 @@
             </div>
 
             <!-- 6. Web Design & Development Services -->
-            <h3 class="category-title fade-in"><span data-lucide="globe"></span> 🌍 WEB DESIGN & DEVELOPMENT SERVICES...</h3>
+            <h3 id="web-services" class="category-title fade-in"><span data-lucide="globe"></span> 🌍 WEB DESIGN & DEVELOPMENT SERVICES...</h3>
             <div class="products-services-grid">
                 <article class="service-card image-hover fade-in" data-service-name="Website Layout Design">
                     <img src="https://admin.12grids.com/uploads/blogs/original_cover_images/Webp/Basics_Of_Responsive_Web_Design_12Grids.webp" alt="Website Layout Design - Responsive web design services" class="card-image">
@@ -1706,7 +1777,7 @@
             </div>
 
             <!-- 7. Online & Internet Services -->
-            <h3 class="category-title fade-in"><span data-lucide="wifi"></span> 🌐 ONLINE & INTERNET RELATED SERVICES...</h3>
+            <h3 id="online-services" class="category-title fade-in"><span data-lucide="wifi"></span> 🌐 ONLINE & INTERNET RELATED SERVICES...</h3>
             <div class="products-services-grid">
                 <article class="service-card image-hover fade-in" data-service-name="Email Account Creation">
                     <img src="https://th.bing.com/th/id/OIP.Mp5_GkhRUvYFfBO_Odln1gHaFQ?rs=1&pid=ImgDetMain" alt="Email Account Creation - Professional email setup" class="card-image">
@@ -1776,7 +1847,7 @@
             </div>
 
             <!-- 8. ICT & Technical Services -->
-            <h3 class="category-title fade-in"><span data-lucide="settings"></span> 🛠 ICT AND TECHNICAL SUPPORT CENTER...</h3>
+            <h3 id="technical-services" class="category-title fade-in"><span data-lucide="settings"></span> 🛠 ICT AND TECHNICAL SUPPORT CENTER...</h3>
             <div class="products-services-grid">
                 <article class="service-card image-hover fade-in" data-service-name="Software Installation">
                     <img src="https://th.bing.com/th/id/R.5d2ce835b52458d8e9f5932e7147b56c?rik=h0FHpibFQR4K%2bg&pid=ImgRaw&r=0" alt="Software Installation - Computer software setup" class="card-image">
@@ -2032,7 +2103,7 @@
                     event.preventDefault();
                     const serviceName = event.target.dataset.service;
                     const encodedService = encodeURIComponent(serviceName);
-                    const whatsappMessage = `Hello GraphiCom, I am interested in ${encodedService}. Can you please provide more information or help me get started?`;
+                    const whatsappMessage = `Hello GraphiCom, I am currently interested in ${encodedService}. Can you please provide more information or help me get started? Thank You.`;
                     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
                     window.open(whatsappUrl, '_blank');
                 });
@@ -2077,7 +2148,3 @@
     </script>
 </body>
 </html>
-
-
-
-
